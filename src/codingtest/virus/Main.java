@@ -23,7 +23,6 @@ public class Main {
             int b = scan.nextInt();
 
             map[a][b] = 1;
-            map[b][a] = 1;
         }
 
         dfs(1);
