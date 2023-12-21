@@ -67,6 +67,7 @@ public class Main {
 
                 if(nx >= 0 && ny >=0 && nx <N && ny < N && map[nx][ny] != '*') {
                     if(map[nx][ny] == '!') {
+
                         int tmp = now.cnt;
                         p.add(new Node(nx,ny,d1[now.d], tmp+1));
                         p.add(new Node(nx,ny,d2[now.d], tmp+1));
