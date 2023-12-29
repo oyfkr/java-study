@@ -10,7 +10,6 @@ public class Main {
     static List<List<Node>> nodes = new ArrayList<>();
     static boolean[] visit;
     static int[] dist;
-    static int[] history;
 
     public static void main(String[] args) throws IOException {
 
@@ -23,7 +22,6 @@ public class Main {
 
         visit = new boolean[V+1];
         dist = new int[V+1];
-        history = new int[V+1];
         Arrays.fill(dist, Integer.MAX_VALUE);
 
         for(int i = 0; i<=V;i++) {
@@ -46,7 +44,6 @@ public class Main {
 
         visit = new boolean[V+1];
         dist = new int[V+1];
-        history = new int[V+1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dijkstra(P);
 
@@ -75,7 +72,6 @@ public class Main {
                     if(!visit[n.x] && dist[n.x] > now.weight + n.weight) {
                         dist[n.x] = now.weight + n.weight;
                         p.add(new Node(n.x, now.weight + n.weight));
-                        history[n.x] = now.x;
                     }
                 }
             }
